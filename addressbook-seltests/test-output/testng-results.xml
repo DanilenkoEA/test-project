@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17513" started-at="2014-06-29T20:42:57Z" finished-at="2014-06-29T20:43:14Z">
+  <suite name="Default suite" duration-ms="9508" started-at="2014-07-06T21:09:22Z" finished-at="2014-07-06T21:09:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17513" started-at="2014-06-29T20:42:57Z" finished-at="2014-06-29T20:43:14Z">
-      <class name="com.example.tests.GroupCreationTests">
-        <test-method status="PASS" signature="testEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupCreationTests@68558426]" name="testEmptyGroupCreation" duration-ms="1740" started-at="2014-06-30T00:43:04Z" finished-at="2014-06-30T00:43:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testEmptyGroupCreation -->
-        <test-method status="PASS" signature="testNonEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupCreationTests@68558426]" name="testNonEmptyGroupCreation" duration-ms="1674" started-at="2014-06-30T00:43:06Z" finished-at="2014-06-30T00:43:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNonEmptyGroupCreation -->
-      </class> <!-- com.example.tests.GroupCreationTests -->
-      <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@7531f745]" name="setUp" is-config="true" duration-ms="7285" started-at="2014-06-30T00:42:57Z" finished-at="2014-06-30T00:43:04Z">
+    <test name="Default test" duration-ms="9508" started-at="2014-07-06T21:09:22Z" finished-at="2014-07-06T21:09:32Z">
+      <class name="com.example.tests.GroupModificationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupModificationTests@1b65c779]" name="setUp" is-config="true" duration-ms="7166" started-at="2014-07-07T01:09:22Z" finished-at="2014-07-07T01:09:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testEmptyContactCreation()[pri:0, instance:com.example.tests.ContactCreationTests@7531f745]" name="testEmptyContactCreation" duration-ms="2706" started-at="2014-06-30T00:43:08Z" finished-at="2014-06-30T00:43:10Z">
+        <test-method status="PASS" signature="modifySomeGroup()[pri:0, instance:com.example.tests.GroupModificationTests@1b65c779]" name="modifySomeGroup" duration-ms="1928" started-at="2014-07-07T01:09:30Z" finished-at="2014-07-07T01:09:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testEmptyContactCreation -->
-        <test-method status="PASS" signature="testNonEmptyContactCreation()[pri:0, instance:com.example.tests.ContactCreationTests@7531f745]" name="testNonEmptyContactCreation" duration-ms="3680" started-at="2014-06-30T00:43:10Z" finished-at="2014-06-30T00:43:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNonEmptyContactCreation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@7531f745]" name="tearDown" is-config="true" duration-ms="401" started-at="2014-06-30T00:43:14Z" finished-at="2014-06-30T00:43:14Z">
+        </test-method> <!-- modifySomeGroup -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupModificationTests@1b65c779]" name="tearDown" is-config="true" duration-ms="397" started-at="2014-07-07T01:09:32Z" finished-at="2014-07-07T01:09:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.ContactCreationTests -->
+      </class> <!-- com.example.tests.GroupModificationTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
