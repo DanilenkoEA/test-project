@@ -38,5 +38,22 @@ public class ContactHelper extends HelperBase{
 	public void returnToHomePage() {
 		click(By.linkText("home page"));
 	}
+	
+	public void initContactEdit(int index) {
+		selectContactByIndex(index);
+		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+1) + "]/td[7]/a"));
+	}
+	
+	private void selectContactByIndex(int index) {
+		click(By.xpath("(//input[@name='selected[]'])[" + index + "]"));
+	}
+		
+	public void deleteContact() {
+		click(By.xpath("(//input[@name='update'])[2]"));	
+	}
+	
+	public void updateContact() {
+		click(By.xpath("(//input[@name='update'])[1]"));	
+	}
 
 }
