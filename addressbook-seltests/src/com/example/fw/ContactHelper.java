@@ -65,8 +65,8 @@ public class ContactHelper extends HelperBase{
 		List<WebElement> entries = driver.findElements(By.name("entry"));
 		for (WebElement entry : entries) {
 			ContactData contact = new ContactData();
-			contact.last_name = entry.findElement(By.xpath("td[2]")).getText();
-			contact.first_name = entry.findElement(By.xpath("td[3]")).getText();
+			contact.last_name = entry.findElement(By.xpath(".//td[2]")).getText();
+			contact.first_name = entry.findElement(By.xpath(".//td[3]")).getText();
 			contacts.add(contact);
 		}
 		return contacts;

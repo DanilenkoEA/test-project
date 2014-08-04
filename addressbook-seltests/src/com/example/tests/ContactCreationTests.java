@@ -1,13 +1,15 @@
 package com.example.tests;
 
 import static org.testng.Assert.assertEquals;
+
 import java.util.Collections;
 import java.util.List;
 import org.testng.annotations.Test;
 
 public class ContactCreationTests extends TestBase{
-  @Test
-  public void testNonEmptyContactCreation() throws Exception {
+
+@Test(dataProvider = "randomValidContactGenerator")
+    public void testContactCreationWithValidData(ContactData contact)  throws Exception {
 	app.getNavigationHelper().openMainPage();
 
     //save old state
@@ -15,21 +17,6 @@ public class ContactCreationTests extends TestBase{
     
     //actions
 	app.getContactHelper().initContactCreation();
-	ContactData contact = new ContactData();
-	contact.first_name = "First name 1";
-	contact.last_name = "Last name 1";
-	contact.address = "address 1";
-	contact.tel_home = "home 1";
-	contact.tel_mob = "mobile 1";
-	contact.tel_work = "work 1";
-	contact.email1 = "mail 1";
-	contact.email2 = "mail 2";
-	contact.day = "18";
-	contact.month = "July";
-	contact.year = "1999";	
-	contact.group = "group 1";
-	contact.second_address = "address 2";
-	contact.second_tel_home = "home 2";
 	app.getContactHelper().fillContactPage(contact);
     app.getContactHelper().submitContactCreation();
     app.getContactHelper().returnToHomePage();
@@ -42,14 +29,4 @@ public class ContactCreationTests extends TestBase{
     Collections.sort(oldList);
     assertEquals(newList, oldList);
   }
-  
- /* @Test
-  public void testEmptyContactCreation() throws Exception {
-	app.getNavigationHelper().openMainPage();
-	app.getContactHelper().initContactCreation();
-	app.getContactHelper().fillContactPage(new ContactData("", "", "", "", "", "", "", "", "-", "-", "-", "", "", ""));
-    app.getContactHelper().submitContactCreation();
-    app.getContactHelper().returnToHomePage();
-  }*/
- 
   }
